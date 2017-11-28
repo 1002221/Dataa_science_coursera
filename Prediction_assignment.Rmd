@@ -1,0 +1,20 @@
+---
+title: "Prediction Assignment"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Here, I train a model on the training data in order to predict the 'classe' variable for the testing data.
+
+The first thing to notice about the training data is that it is very big, containing over 100 columns. If, however, I remove all those with more than 20% missing values / NAs, as well as those which are unlikely to be of any help in predicing 'classe' (i.e. ID, user_name, raw_timestamp_part_1, raw_timestamp_part_2, cvtd_timestamp, new_window, num_window), then I am left with fewer than 60 predictors.
+
+It can easily be checked that none of these predictors have any missing values or NAs, nor that any of them have a very small variability, and hence all can be safely kept.
+
+I then train a random forest on the training data, using all the predictors not eliminated at this stage. To assess its out-of-sample accuracy, I perform 5-fold cross validation and average over the errors for each fold. Like this, I obtain an accuracy of 99.6%.
+
+My reason for not using "rpart" (desite it being much faster) is that, when I tested its accuracy using 5-fold cross-validation, its accuracy turned out to be less than 50%, which is unacceptably low. Running a random forest took longer, though it wasn't computationally infeasible and gave a much more accurate result. This is why I chose this method.
