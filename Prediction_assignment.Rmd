@@ -3,10 +3,6 @@ title: "Prediction Assignment"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## R Markdown
 
 Here, I train a model on the training data in order to predict the 'classe' variable for the testing data.
