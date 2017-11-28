@@ -171,7 +171,7 @@ hr {
 
 <p>It can easily be checked that none of these predictors have any missing values or NAs, nor that any of them have a very small variability, and hence all can be safely kept.</p>
 
-<p>I then train a random forest on the training data, using all the predictors not eliminated at this stage. To assess its out-of-sample accuracy, I perform 5-fold cross validation and average over the errors for each fold. Like this, I obtain an accuracy of 99.6%.</p>
+<p>I then train a random forest on the training data, using all the predictors not eliminated at this stage. To assess its out-of-sample accuracy, I perform 5-fold cross validation and average over the errors for each fold. Like this, I obtain an accuracy of 99.6%. Hence, I expect its out-of-sample error rate to be approximately 0.4%.</p>
 
 <p>My reason for not using &quot;rpart&quot; (desite it being much faster) is that, when I tested its accuracy using 5-fold cross-validation, its accuracy turned out to be less than 50%, which is unacceptably low. Running a random forest took longer, though it wasn&#39;t computationally infeasible and gave a much more accurate result. This is why I chose this method.</p>
 
