@@ -1,4 +1,4 @@
-## R Markdown
+## Prediction Assignment
 
 Here, I train a model on the training data in order to predict the 'classe' variable for the testing data.
 
