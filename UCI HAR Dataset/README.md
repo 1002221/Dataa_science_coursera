@@ -5,3 +5,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 For data where we have the 128 readings, this code calculates and retains only the mean and standard deviation. For the large dataset containing all the variables, it retains only those pertaining to the mean and the standard devivation.
 
 Finally, it produces a data frame containing only the means for each variable.
+
+To run the code, download the data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+ and change line 1 of the code according to where you saved it.
